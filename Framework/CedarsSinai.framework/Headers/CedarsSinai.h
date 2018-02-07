@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for CedarSinai.
+//! Project version number for CearSinai.
 FOUNDATION_EXPORT double CedarSinaiVersionNumber;
 
 //! Project version string for CedarSinai.
