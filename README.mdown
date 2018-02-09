@@ -1,0 +1,26 @@
+# Installation
+
+
+In the AppDelegate register the Application
+
+```swift
+PWCore.setApplicationID("appID", accessKey: "accessKey", signatureKey: "signatureKey")
+```
+
+You can read thes values from a plist file using  the `CSPlistReader`
+
+```swift
+if let configurationDitionary = CSPlistReader.dictionary(plistName: "Config", inBundle: Bundle.main),
+    let appID = configurationDitionary["appID"] as? String,
+    let accessKey = configurationDitionary["accessKey"] as? String,
+    let signatureKey = configurationDitionary["signatureKey"] as? String {
+        PWCore.setApplicationID(appID, accessKey: accessKey, signatureKey: signatureKey)
+}
+```
+
+You should instantiate the module's root view controller using:
+
+```swift
+let viewController = CSMapModule.initialViewController(withBuidingID: 12)
+navigationController?.pushViewController(viewController, animated: true)
+```
