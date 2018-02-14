@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name         = "CedarsSinai"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Mapping module as framework for CedarsSinai."
   s.author       = "Phunware, Inc"
   s.homepage       = "https://phunware.com"
 
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "ssh://git@bitbucket.phunware.com:7999/services/sdk-cedars-sinai-ios.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/gmorales-phunware/CedarsSinai", :tag => "#{s.version}" }
 
   s.vendored_frameworks = 'Framework/CedarsSinai.framework'
 
