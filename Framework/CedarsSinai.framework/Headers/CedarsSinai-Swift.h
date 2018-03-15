@@ -174,6 +174,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import PWMapKit;
+@import PWEngagement;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -185,14 +186,15 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("CedarsSinai")
-@class PWCustomLocation;
+@class PWUserLocation;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC11CedarsSinai25CSMapModuleViewController")
 @interface CSMapModuleViewController : UIViewController
-@property (nonatomic, readonly, strong) PWCustomLocation * _Nullable currentUserLocationInMap;
+@property (nonatomic, readonly, strong) PWUserLocation * _Nullable currentUserLocationInMap;
 - (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -200,12 +202,14 @@ SWIFT_CLASS("_TtC11CedarsSinai25CSMapModuleViewController")
 
 
 @class PWRoute;
-@class PWPointOfInterest;
+@protocol PWMapPoint;
 
 @interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai))
 - (void)presentRoutingMapViewWithRoute:(PWRoute * _Nonnull)route;
-- (void)showSelectedPOIDetail:(PWPointOfInterest * _Nonnull)poi;
+- (void)showSelectedPOIDetail:(id <PWMapPoint> _Nonnull)poi;
 @end
+
+
 
 
 
