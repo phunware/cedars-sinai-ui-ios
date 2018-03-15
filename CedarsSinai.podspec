@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/gmorales-phunware/CedarsSinai", :tag => "#{s.version}" }
   s.requires_arc = true
   s.ios.vendored_frameworks = "Framework/*.framework"
-  s.dependency "PWMapKit", "~> 3.3.0"
+  s.dependency "PWMapKitBeta", "~> 3.3.0"
   s.dependency "PWEngagement", "~> 3.3.0"
   s.dependency "Kingfisher", "~> 4.0"
 end
