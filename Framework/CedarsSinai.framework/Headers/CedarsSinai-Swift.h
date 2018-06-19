@@ -213,15 +213,12 @@ SWIFT_CLASS("_TtC11CedarsSinai25CSMapModuleViewController")
 @end
 
 @class PWRoute;
-@class PWPointOfInterest;
 @protocol PWMapPoint;
 
 @interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai))
-- (void)presentRoutingMapViewWithRoute:(PWRoute * _Nonnull)route destination:(PWPointOfInterest * _Nullable)destination;
+- (void)presentRoutingMapViewWithRoute:(PWRoute * _Nonnull)route origin:(id <PWMapPoint> _Nullable)origin destination:(id <PWMapPoint> _Nullable)destination;
 - (void)showSelectedPOIDetail:(id <PWMapPoint> _Nonnull)poi;
 @end
-
-
 
 
 
