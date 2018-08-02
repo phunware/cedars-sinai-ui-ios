@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CedarsSinai"
-  s.version      = "0.0.11"
+  s.version      = "0.0.13"
   s.summary      = "Mapping module as framework for CedarsSinai."
   s.author       = "Phunware, Inc"
   s.homepage     = "https://phunware.com"
