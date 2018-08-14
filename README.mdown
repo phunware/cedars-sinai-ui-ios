@@ -32,9 +32,22 @@ navigationController?.pushViewController(viewController, animated: true)
 
 ## Route builder
 
-To start the route builder with a destination POI
+To start the map and present the route builder use this method:
+```swift
+public static func initialRouteBuilder(withBuildingID buildingID: Int, poiID: Int? = nil) -> CSMapModuleViewController
+```
+
+You can optionally pass the destination POI ID
 
 ```swift
 let viewController = CSMapModule.initialRouteBuilder(withBuildingID: buildingID, poiID: poiID)
 navigationController?.pushViewController(viewController, animated: true)
+```
+
+# Troubleshooting
+
+Make sure you always have the last version of this pod
+
+```sh
+pod update CedarsSinai
 ```
