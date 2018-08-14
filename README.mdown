@@ -1,5 +1,19 @@
 # Installation
 
+## Cocoapods
+
+Add this pod to your `Podfile` and run `pod install`
+
+```ruby
+pod 'CedarsSinai', git: 'https://github.com/gmorales-phunware/CedarsSinai', branch: 'beta'
+```
+
+Make sure you always have the latest version of this pod
+
+```sh
+pod update CedarsSinai
+```
+
 ## Register your app
 
 In the AppDelegate register the Application
