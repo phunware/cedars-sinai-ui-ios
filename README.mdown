@@ -1,5 +1,6 @@
 # Installation
 
+## Register your app
 
 In the AppDelegate register the Application
 
@@ -18,9 +19,22 @@ if let configurationDitionary = CSPlistReader.dictionary(plistName: "Config", in
 }
 ```
 
+# Start Mapping Module
+
+## Default ViewController
+
 You should instantiate the module's root view controller using:
 
 ```swift
 let viewController = CSMapModule.initialViewController(withBuidingID: 12)
+navigationController?.pushViewController(viewController, animated: true)
+```
+
+## Route builder
+
+To start the route builder with a destination POI
+
+```swift
+let viewController = CSMapModule.initialRouteBuilder(withBuildingID: buildingID, poiID: poiID)
 navigationController?.pushViewController(viewController, animated: true)
 ```
