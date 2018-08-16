@@ -8,11 +8,13 @@ Add this pod to your `Podfile` and run `pod install`
 pod 'CedarsSinai', git: 'https://github.com/gmorales-phunware/CedarsSinai', branch: 'beta'
 ```
 
-Make sure you always have the latest version of this pod
+When updating a version, please follow the following steps: 
 
-```sh
-pod update CedarsSinai
-```
+`rm -rf Pods/`
+
+`rm -rf Podfile.lock`
+
+`pod update`
 
 ## Register your app
 
