@@ -8,13 +8,11 @@ Add this pod to your `Podfile` and run `pod install`
 pod 'CedarsSinai', git: 'https://github.com/gmorales-phunware/CedarsSinai', branch: 'beta'
 ```
 
-When updating a version, please follow the following steps: 
+Make sure you always have the latest version of this pod
 
-`rm -rf Pods/`
-
-`rm -rf Podfile.lock`
-
-`pod update`
+```sh
+pod update CedarsSinai
+```
 
 ## Register your app
 
@@ -58,6 +56,16 @@ You can optionally pass the destination POI ID
 ```swift
 let viewController = CSMapModule.initialRouteBuilder(withBuildingID: buildingID, poiID: poiID)
 navigationController?.pushViewController(viewController, animated: true)
+```
+
+## Prefetching building data
+
+You can fetch the building data and cache it before displaying the map:
+
+```swift
+CSMapModule.loadBuilding(withBuildingID: buildingID) { (error) in
+
+}
 ```
 
 # Troubleshooting

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CedarsSinai"
-  s.version      = "0.0.19"
+  s.version      = "0.0.21"
   s.summary      = "Mapping module as framework for CedarsSinai."
   s.author       = "Phunware, Inc"
   s.homepage     = "https://phunware.com"
@@ -14,3 +14,4 @@ Pod::Spec.new do |s|
   s.dependency "Kingfisher", "~> 4.0"
   s.dependency "SDCAlertView", "~> 8.0"
 end
+
