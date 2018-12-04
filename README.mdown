@@ -1,5 +1,20 @@
 # Installation
 
+## Cocoapods
+
+Add this pod to your `Podfile` and run `pod install`
+
+```ruby
+pod 'CedarsSinai', git: 'https://github.com/phunware/cedars-sinai-ui-ios', branch: 'swift4.2'
+```
+
+Make sure you always have the latest version of this pod
+
+```sh
+pod update CedarsSinai
+```
+
+## Register your app
 
 In the AppDelegate register the Application
 
@@ -18,9 +33,45 @@ if let configurationDitionary = CSPlistReader.dictionary(plistName: "Config", in
 }
 ```
 
+# Start Mapping Module
+
+## Default ViewController
+
 You should instantiate the module's root view controller using:
 
 ```swift
 let viewController = CSMapModule.initialViewController(withBuidingID: 12)
 navigationController?.pushViewController(viewController, animated: true)
+```
+
+## Route builder
+
+To start the map and present the route builder use this method:
+```swift
+public static func initialRouteBuilder(withBuildingID buildingID: Int, poiID: Int? = nil) -> CSMapModuleViewController
+```
+
+You can optionally pass the destination POI ID
+
+```swift
+let viewController = CSMapModule.initialRouteBuilder(withBuildingID: buildingID, poiID: poiID)
+navigationController?.pushViewController(viewController, animated: true)
+```
+
+## Prefetching building data
+
+You can fetch the building data and cache it before displaying the map:
+
+```swift
+CSMapModule.loadBuilding(withBuildingID: buildingID) { (error) in
+
+}
+```
+
+# Troubleshooting
+
+Make sure you always have the last version of this pod
+
+```sh
+pod update CedarsSinai
 ```
