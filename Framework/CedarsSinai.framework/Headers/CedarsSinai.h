@@ -12,4 +12,3 @@ FOUNDATION_EXPORT double CedarSinaiVersionNumber;
 
 //! Project version string for CedarSinai.
 FOUNDATION_EXPORT const unsigned char CedarSinaiVersionString[];
-
