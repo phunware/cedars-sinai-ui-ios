@@ -15,6 +15,5 @@ Pod::Spec.new do |s|
   s.dependency "PWEngagement", "3.7.2"
   s.dependency "Kingfisher", "~> 4.0"
   s.dependency "SDCAlertView", "~> 9.0"
-  s.dependency "MBProgressHUD", "1.1.0"
 end
 
