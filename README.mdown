@@ -5,7 +5,7 @@
 Add this pod to your `Podfile` and run `pod install`
 
 ```ruby
-pod 'CedarsSinai', git: 'https://github.com/phunware/cedars-sinai-ui-ios', tag: '0.0.35'
+pod 'CedarsSinai', git: 'https://github.com/phunware/cedars-sinai-ui-ios', tag: '0.0.36'
 ```
 
 Make sure you always have the latest version of this pod
@@ -20,6 +20,9 @@ In the AppDelegate register the Application
 
 ```swift
 PWCore.setApplicationID("appID", accessKey: "accessKey", signatureKey: "signatureKey")
+PWEngagement.start(withMaasAppId: "appID", accessKey: "accessKey", signatureKey: "signatureKey") { (Error?) in
+    
+}
 ```
 
 You can read thes values from a plist file using  the `CSPlistReader`
