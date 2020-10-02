@@ -185,6 +185,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreBluetooth;
 @import CoreLocation;
+@import Foundation;
 @import PWEngagement;
 @import PWMapKit;
 @import UIKit;
@@ -218,17 +219,23 @@ SWIFT_CLASS("_TtC11CedarsSinai25CSMapModuleViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class CLLocationManager;
 
-@interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-@end
 
 @class CBCentralManager;
 
 @interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CBCentralManagerDelegate>
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
+
+@class CLLocationManager;
+
+@interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+@end
+
+
+
+
 
 
 
@@ -441,6 +448,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreBluetooth;
 @import CoreLocation;
+@import Foundation;
 @import PWEngagement;
 @import PWMapKit;
 @import UIKit;
@@ -474,17 +482,23 @@ SWIFT_CLASS("_TtC11CedarsSinai25CSMapModuleViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class CLLocationManager;
 
-@interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-@end
 
 @class CBCentralManager;
 
 @interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CBCentralManagerDelegate>
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
+
+@class CLLocationManager;
+
+@interface CSMapModuleViewController (SWIFT_EXTENSION(CedarsSinai)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+@end
+
+
+
+
 
 
 
