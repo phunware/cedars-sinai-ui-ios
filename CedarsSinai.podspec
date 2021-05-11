@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CedarsSinai"
-  s.version      = "0.0.43"
+  s.version      = "0.0.44"
   s.summary      = "Mapping module as framework for CedarsSinai."
   s.author       = "Phunware, Inc"
   s.homepage     = "https://phunware.com"
@@ -9,10 +9,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/phunware/cedars-sinai-ui-ios", :tag => "#{s.version}" }
   s.requires_arc = true
   s.ios.vendored_frameworks = "Framework/*.framework"
-  s.dependency "PWCore", "3.8.6"
-  s.dependency "PWLocation", "3.8.4"
-  s.dependency "PWMapKit", "3.9.1"
-  s.dependency "PWEngagement", "3.7.4"
+  s.dependency "PWMapKit/NoAds", "3.9.1"
+  s.dependency "PWEngagement/NoAds", "3.7.4"
   s.dependency "Kingfisher", "5.2.0"
   s.dependency "SDCAlertView", "11.1.2"
 end
