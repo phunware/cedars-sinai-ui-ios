@@ -1,0 +1,31 @@
+import_from_git(
+    url: "ssh://git@bitbucket.phunware.com:7999/services/dev-scripts-fastlane.git",
+    branch: "restart-beta",
+    path: "ios/fastlane/Fastfile"
+)
+
+private_lane :configure_build do
+    # Password for push cert is: K3yM@$ter!
+
+    set_build_settings(
+     scheme: "cedars-sinai",
+     workspace: "cedars-sinai.xcworkspace",
+     configuration: "Release",
+     export_method: "enterprise",
+     bundle_identifier: "com.phunware.cedars-sinai-ent",
+     version: "~> 12",
+     cert_file: "Certificates/enterprise2019.p12",
+     cert_pw: "K3yM@$ter!",
+     profileSpecifier: "CedarsSinai_Enterprise",
+     customProfilesPath: "Certificates/",
+     teamId: "84CK77G588",
+     identity: "iPhone Distribution: Phunware, Inc."
+    )
+
+    do_not_specify_provisioning_profile()
+
+    publish_to_enterprise_ota(
+        signingConfig: "enterprise"
+    )
+
+end

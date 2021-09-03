@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CedarsSinai"
-  s.version      = "0.0.44"
+  s.version      = "0.0.46"
   s.summary      = "Mapping module as framework for CedarsSinai."
   s.author       = "Phunware, Inc"
   s.homepage     = "https://phunware.com"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = "Framework/*.framework"
   s.dependency "PWMapKit/NoAds", "3.9.1"
   s.dependency "PWEngagement/NoAds", "3.7.4"
-  s.dependency "Kingfisher", "5.2.0"
+  s.dependency "Kingfisher", "5.7.1"
   s.dependency "SDCAlertView", "11.1.2"
 end
 

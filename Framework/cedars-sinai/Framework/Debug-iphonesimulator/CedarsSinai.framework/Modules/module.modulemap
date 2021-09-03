@@ -1,0 +1,11 @@
+framework module CedarsSinai {
+  umbrella header "CedarsSinai.h"
+
+  export *
+  module * { export * }
+}
+
+module CedarsSinai.Swift {
+    header "CedarsSinai-Swift.h"
+    requires objc
+}

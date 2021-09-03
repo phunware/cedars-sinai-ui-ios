@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s8d-jL-wTe">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AuY-9d-PeP">
+            <objects>
+                <navigationController id="s8d-jL-wTe" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FJ6-TG-fYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="06j-Lq-eTH" kind="relationship" relationship="rootViewController" id="V8u-ql-vuX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miu-r1-uta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="139"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="UCw-5X-bPJ">
+            <objects>
+                <viewController id="06j-Lq-eTH" customClass="HomeViewController" customModule="cedars_sinai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GIb-a2-Maf"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpH-p3-yYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Hm-Sc-cbG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oat-Go-Leo">
+                                <rect key="frame" x="28" y="116.5" width="319" height="390"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-af-rtC">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="Map"/>
+                                        <connections>
+                                            <segue destination="uTN-DR-A1s" kind="show" id="LIN-Bu-3As"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdm-aP-fhX">
+                                        <rect key="frame" x="0.0" y="110" width="319" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="Route Builder"/>
+                                        <connections>
+                                            <action selector="didPressStartRoute:" destination="06j-Lq-eTH" eventType="touchUpInside" id="VOJ-rs-6PK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS8-FF-XyI">
+                                        <rect key="frame" x="0.0" y="220" width="319" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="Route with POI"/>
+                                        <connections>
+                                            <action selector="didPressRouteWithPOI:" destination="06j-Lq-eTH" eventType="touchUpInside" id="pba-or-crz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-89-2wF">
+                                        <rect key="frame" x="0.0" y="330" width="319" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="Prefetch Building"/>
+                                        <connections>
+                                            <action selector="prefetchBuilding:" destination="06j-Lq-eTH" eventType="touchUpInside" id="rIy-HT-48q"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6f-AE-HjN">
+                                        <rect key="frame" x="0.0" y="390" width="319" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="show Alert"/>
+                                        <connections>
+                                            <action selector="showArrivalAlert:" destination="06j-Lq-eTH" eventType="touchUpInside" id="ggy-ln-1Ui"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oat-Go-Leo" firstAttribute="centerY" secondItem="3Hm-Sc-cbG" secondAttribute="centerY" id="raT-WM-JEn"/>
+                            <constraint firstItem="oat-Go-Leo" firstAttribute="centerX" secondItem="3Hm-Sc-cbG" secondAttribute="centerX" id="tgg-eo-adv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="N3H-ta-wtw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7R-m1-ksr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="139"/>
+        </scene>
+        <!--CSMapModuleViewController-->
+        <scene sceneID="fv2-t1-w8m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CSMapModuleViewController" bundleIdentifier="com.phunware.CedarsSinai" id="uTN-DR-A1s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9mW-4f-QO1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOS-61-okm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="134"/>
+        </scene>
+    </scenes>
+</document>
