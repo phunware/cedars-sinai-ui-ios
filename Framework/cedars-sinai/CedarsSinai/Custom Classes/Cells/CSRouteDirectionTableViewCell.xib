@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSRouteDirectionTableViewCell" customModule="CedarsSinai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-mS-CCi">
+                    <rect key="frame" x="20" y="17" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="5cu-NS-nzs"/>
+                        <constraint firstAttribute="height" constant="48" id="7WB-c5-tQ5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current route" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCF-ae-APS">
+                    <rect key="frame" x="76" y="31.5" width="386" height="19.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Il-mS-CCi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="2gx-Ee-TTJ"/>
+                <constraint firstItem="jCF-ae-APS" firstAttribute="leading" secondItem="7Il-mS-CCi" secondAttribute="trailing" constant="8" symbolic="YES" id="3Jk-Aw-kfP"/>
+                <constraint firstItem="7Il-mS-CCi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="60d-dz-APL"/>
+                <constraint firstItem="7Il-mS-CCi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jcO-5O-LKO"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7Il-mS-CCi" secondAttribute="bottom" constant="8" id="kKt-sH-UXM"/>
+                <constraint firstAttribute="trailing" secondItem="jCF-ae-APS" secondAttribute="trailing" constant="20" symbolic="YES" id="sO2-Ir-AOs"/>
+                <constraint firstItem="jCF-ae-APS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xLH-JP-QUJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainDirectionLabel" destination="jCF-ae-APS" id="fWe-uJ-bCC"/>
+                <outlet property="routeActionImageView" destination="7Il-mS-CCi" id="lNl-gQ-3Ah"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="-224"/>
+        </view>
+    </objects>
+</document>

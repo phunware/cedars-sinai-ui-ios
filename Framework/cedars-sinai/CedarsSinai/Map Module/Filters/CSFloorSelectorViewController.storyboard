@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5qd-K0-mre">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham Bold.otf">
+            <string>Gotham-Bold</string>
+        </array>
+        <array key="Gotham Book.otf">
+            <string>Gotham-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Floor Selector View Controller-->
+        <scene sceneID="6vT-0A-zin">
+            <objects>
+                <viewController id="5qd-K0-mre" customClass="CSFloorSelectorViewController" customModule="CedarsSinai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gCW-nG-SoT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ue4-vn-zk3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="98p-Qh-LO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQA-7p-aoK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Floor Selector" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8s-8l-Eaf">
+                                        <rect key="frame" x="32" y="20" width="123" height="19"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk9-B8-49k">
+                                        <rect key="frame" x="323" y="1.5" width="44" height="44"/>
+                                        <state key="normal" image="ios_icons_close"/>
+                                        <connections>
+                                            <action selector="didPressCloseButton:" destination="5qd-K0-mre" eventType="touchUpInside" id="chy-Gz-esh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yk9-B8-49k" secondAttribute="trailing" constant="8" id="8ka-6Z-jC5"/>
+                                    <constraint firstAttribute="height" constant="47" id="CGt-pJ-tJP"/>
+                                    <constraint firstItem="yk9-B8-49k" firstAttribute="centerY" secondItem="tQA-7p-aoK" secondAttribute="centerY" id="G5Z-bU-8fA"/>
+                                    <constraint firstAttribute="bottom" secondItem="q8s-8l-Eaf" secondAttribute="bottom" constant="8" id="jO6-bn-XAa"/>
+                                    <constraint firstItem="q8s-8l-Eaf" firstAttribute="leading" secondItem="tQA-7p-aoK" secondAttribute="leading" constant="32" id="jgp-67-97y"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ijo-2k-nbK">
+                                <rect key="frame" x="0.0" y="47" width="375" height="620"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="floorCell" id="FvK-Pt-zyk" customClass="CSFloorTableViewCell" customModule="CedarsSinai" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FvK-Pt-zyk" id="6ll-Jj-bVs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Floor Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w70-60-vu3">
+                                                    <rect key="frame" x="33" y="16" width="322" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="w70-60-vu3" firstAttribute="leading" secondItem="6ll-Jj-bVs" secondAttribute="leading" constant="33" id="Elh-2b-nvV"/>
+                                                <constraint firstAttribute="trailing" secondItem="w70-60-vu3" secondAttribute="trailing" constant="20" symbolic="YES" id="aBK-ek-NYd"/>
+                                                <constraint firstItem="w70-60-vu3" firstAttribute="centerY" secondItem="6ll-Jj-bVs" secondAttribute="centerY" id="bx8-uS-9ug"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                                <color key="value" red="0.0" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="floorNumberLabel" destination="w70-60-vu3" id="Gc5-vq-tfd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tQA-7p-aoK" firstAttribute="leading" secondItem="98p-Qh-LO5" secondAttribute="leading" id="DDF-dP-YcR"/>
+                            <constraint firstItem="Ijo-2k-nbK" firstAttribute="top" secondItem="tQA-7p-aoK" secondAttribute="bottom" id="IZN-66-QC3"/>
+                            <constraint firstItem="Ijo-2k-nbK" firstAttribute="leading" secondItem="98p-Qh-LO5" secondAttribute="leading" id="RQc-XN-kbK"/>
+                            <constraint firstAttribute="trailing" secondItem="tQA-7p-aoK" secondAttribute="trailing" id="UcL-q2-wqX"/>
+                            <constraint firstItem="tQA-7p-aoK" firstAttribute="top" secondItem="98p-Qh-LO5" secondAttribute="top" id="YaX-l4-4zO"/>
+                            <constraint firstAttribute="trailing" secondItem="Ijo-2k-nbK" secondAttribute="trailing" id="Zb1-pv-sm6"/>
+                            <constraint firstItem="Ue4-vn-zk3" firstAttribute="top" secondItem="Ijo-2k-nbK" secondAttribute="bottom" id="oD0-e6-i5N"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="floorTableView" destination="Ijo-2k-nbK" id="blu-Fl-auE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkh-IC-T8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ios_icons_close" width="44" height="44"/>
+    </resources>
+</document>
