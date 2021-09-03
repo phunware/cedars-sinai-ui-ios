@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lrW-3D-qju">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Routing Map View Controller-->
+        <scene sceneID="w03-fa-lZH">
+            <objects>
+                <viewController id="lrW-3D-qju" customClass="CSRoutingMapViewController" customModule="CedarsSinai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ugz-3P-gG1"/>
+                        <viewControllerLayoutGuide type="bottom" id="WnR-2D-c7S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zXa-oW-n1F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z04-Ex-wWH">
+                                <rect key="frame" x="0.0" y="159" width="414" height="526.66666666666663"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-cT-8XS" userLabel="Shadow View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="115"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C33-1S-Ygh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="115"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="eAU-2w-Tr9"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xbS-ea-BjZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="routeDirectionCell" id="Ghh-Ha-GRZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10B-Le-oTh" userLabel="Toolbar View">
+                                <rect key="frame" x="0.0" y="685.66666666666663" width="414" height="50.333333333333371"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ahA-nn-BrI">
+                                        <rect key="frame" x="5" y="8" width="404" height="42.333333333333336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsE-dV-Cmx" customClass="CSTrackingButton" customModule="CedarsSinai" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80.666666666666671" height="42.333333333333336"/>
+                                                <color key="tintColor" red="0.6588235294" green="0.1137254902" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="ios_icon_navigation">
+                                                    <color key="titleColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapTrackingButton:" destination="lrW-3D-qju" eventType="touchUpInside" id="CAS-L6-aai"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrJ-fR-kfS">
+                                                <rect key="frame" x="80.666666666666671" y="0.0" width="81.000000000000014" height="42.333333333333336"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQh-1g-RT1">
+                                                <rect key="frame" x="161.66666666666666" y="0.0" width="80.666666666666657" height="42.333333333333336"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-5j-QLh">
+                                                <rect key="frame" x="242.33333333333337" y="0.0" width="81" height="42.333333333333336"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="249-sa-GEk">
+                                                <rect key="frame" x="323.33333333333331" y="0.0" width="80.666666666666686" height="42.333333333333336"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.86274509803921573" green="0.11764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42.5" id="h4G-2s-jC2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-FY-LfJ">
+                                        <rect key="frame" x="234" y="-1.3333333333332575" width="180" height="53"/>
+                                        <inset key="contentEdgeInsets" minX="14" minY="10" maxX="14" maxY="10"/>
+                                        <state key="normal" image="cancel_route"/>
+                                        <connections>
+                                            <action selector="didTapCancelRouteButton:" destination="lrW-3D-qju" eventType="touchUpInside" id="bCD-hu-cZQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cMA-FY-LfJ" firstAttribute="centerY" secondItem="ahA-nn-BrI" secondAttribute="centerY" constant="-4" id="6hj-r7-Mbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="cMA-FY-LfJ" secondAttribute="trailing" id="9w0-bf-ddt"/>
+                                    <constraint firstItem="ahA-nn-BrI" firstAttribute="centerX" secondItem="10B-Le-oTh" secondAttribute="centerX" id="ajK-h3-5ak"/>
+                                    <constraint firstItem="ahA-nn-BrI" firstAttribute="top" secondItem="10B-Le-oTh" secondAttribute="top" constant="8" id="c9E-DF-oWW"/>
+                                    <constraint firstItem="ahA-nn-BrI" firstAttribute="leading" secondItem="10B-Le-oTh" secondAttribute="leading" constant="5" id="kzq-c7-dxo"/>
+                                    <constraint firstAttribute="bottom" secondItem="ahA-nn-BrI" secondAttribute="bottom" id="vNm-EU-PCa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C33-1S-Ygh" firstAttribute="leading" secondItem="zXa-oW-n1F" secondAttribute="leading" id="22m-V2-xOn"/>
+                            <constraint firstItem="10B-Le-oTh" firstAttribute="top" secondItem="z04-Ex-wWH" secondAttribute="bottom" id="53N-pp-Rhx"/>
+                            <constraint firstAttribute="trailing" secondItem="ExA-cT-8XS" secondAttribute="trailing" id="5Av-We-sGl"/>
+                            <constraint firstItem="C33-1S-Ygh" firstAttribute="top" secondItem="Ugz-3P-gG1" secondAttribute="bottom" id="CDV-1E-Rbf"/>
+                            <constraint firstItem="z04-Ex-wWH" firstAttribute="leading" secondItem="zXa-oW-n1F" secondAttribute="leading" id="CUI-yr-wF6"/>
+                            <constraint firstItem="WnR-2D-c7S" firstAttribute="top" secondItem="ahA-nn-BrI" secondAttribute="bottom" id="K0g-hY-Z9X"/>
+                            <constraint firstAttribute="trailing" secondItem="z04-Ex-wWH" secondAttribute="trailing" id="NSc-wr-AMy"/>
+                            <constraint firstItem="10B-Le-oTh" firstAttribute="leading" secondItem="zXa-oW-n1F" secondAttribute="leading" id="XVF-s1-sgS"/>
+                            <constraint firstItem="ExA-cT-8XS" firstAttribute="top" secondItem="Ugz-3P-gG1" secondAttribute="bottom" id="eQF-1o-Vzj"/>
+                            <constraint firstItem="ExA-cT-8XS" firstAttribute="height" secondItem="C33-1S-Ygh" secondAttribute="height" id="ezq-lF-zhp"/>
+                            <constraint firstItem="ExA-cT-8XS" firstAttribute="leading" secondItem="zXa-oW-n1F" secondAttribute="leading" id="fCQ-VW-fVB"/>
+                            <constraint firstAttribute="trailing" secondItem="C33-1S-Ygh" secondAttribute="trailing" id="gJb-eE-NUI"/>
+                            <constraint firstAttribute="bottom" secondItem="10B-Le-oTh" secondAttribute="bottom" id="k0z-Sz-WVj"/>
+                            <constraint firstAttribute="trailing" secondItem="10B-Le-oTh" secondAttribute="trailing" id="npN-Ch-Wmx"/>
+                            <constraint firstItem="z04-Ex-wWH" firstAttribute="top" secondItem="C33-1S-Ygh" secondAttribute="bottom" id="ugn-ZP-Aki"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="instructionsCollectionView" destination="C33-1S-Ygh" id="qIf-Db-s7A"/>
+                        <outlet property="mapReferenceView" destination="z04-Ex-wWH" id="cpm-X6-wVT"/>
+                        <outlet property="shadowView" destination="ExA-cT-8XS" id="g89-IA-Aey"/>
+                        <outlet property="trackingButton" destination="XsE-dV-Cmx" id="FxH-P6-iNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="am7-Eq-qUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.724637681159422" y="113.31521739130436"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel_route" width="152" height="33"/>
+        <image name="ios_icon_navigation" width="24" height="24"/>
+    </resources>
+</document>

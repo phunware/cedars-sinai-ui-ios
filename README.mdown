@@ -5,7 +5,7 @@
 Add this pod to your `Podfile` and run `pod install`
 
 ```ruby
-pod 'CedarsSinai', git: 'https://github.com/phunware/cedars-sinai-ui-ios', tag: '0.0.44'
+pod 'CedarsSinai', git: 'https://github.com/phunware/cedars-sinai-ui-ios', tag: '0.0.45'
 ```
 
 Make sure you always have the latest version of this pod

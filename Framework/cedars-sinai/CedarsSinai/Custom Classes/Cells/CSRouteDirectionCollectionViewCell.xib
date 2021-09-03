@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CSRouteDirectionCollectionViewCell" customModule="CedarsSinai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImI-gm-tjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_straight_large" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-oU-oHW">
+                                <rect key="frame" x="18" y="33.5" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0hV-A4-WjT"/>
+                                    <constraint firstAttribute="width" constant="48" id="54z-qb-pOE"/>
+                                    <constraint firstAttribute="height" constant="48" id="kz8-nI-cwu"/>
+                                    <constraint firstAttribute="width" constant="48" id="tap-mW-xqX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction Instruction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWp-hd-CLQ">
+                                <rect key="frame" x="92" y="47" width="263" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WWp-hd-CLQ" firstAttribute="leading" secondItem="YKd-oU-oHW" secondAttribute="trailing" constant="26" id="0iW-br-uwS"/>
+                            <constraint firstAttribute="trailing" secondItem="WWp-hd-CLQ" secondAttribute="trailing" constant="20" symbolic="YES" id="QCn-Tx-e7x"/>
+                            <constraint firstItem="YKd-oU-oHW" firstAttribute="leading" secondItem="ImI-gm-tjC" secondAttribute="leading" constant="18" id="WJv-42-X55"/>
+                            <constraint firstItem="WWp-hd-CLQ" firstAttribute="centerY" secondItem="ImI-gm-tjC" secondAttribute="centerY" id="seZ-2m-cMx"/>
+                            <constraint firstItem="YKd-oU-oHW" firstAttribute="centerY" secondItem="ImI-gm-tjC" secondAttribute="centerY" id="zeH-np-Drs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ImI-gm-tjC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Hw-0w-Opd"/>
+                <constraint firstAttribute="bottom" secondItem="ImI-gm-tjC" secondAttribute="bottom" id="SKa-7m-c5c"/>
+                <constraint firstItem="ImI-gm-tjC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="erg-2c-bie"/>
+                <constraint firstAttribute="trailing" secondItem="ImI-gm-tjC" secondAttribute="trailing" id="pxP-cX-zXu"/>
+            </constraints>
+            <size key="customSize" width="354" height="147"/>
+            <connections>
+                <outlet property="containerView" destination="ImI-gm-tjC" id="IxY-WD-0Nn"/>
+                <outlet property="mainInstructionImageView" destination="YKd-oU-oHW" id="KZ9-XL-gIu"/>
+                <outlet property="mainInstructionLabel" destination="WWp-hd-CLQ" id="bSH-K9-gbk"/>
+            </connections>
+            <point key="canvasLocation" x="185.5" y="102.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_straight_large" width="48" height="48"/>
+    </resources>
+</document>

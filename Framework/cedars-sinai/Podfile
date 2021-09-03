@@ -1,0 +1,38 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.2'
+#inhibit_all_warnings!
+use_frameworks!
+
+target 'cedars-sinai' do
+  # Pods for cedars-sinai
+#  pod 'CedarsSinai', git: 'https://github.com/gmorales-phunware/CedarsSinai', branch: 'beta'
+end
+
+target 'CedarsSinai' do
+#  pod 'PWCore', '3.8.6'
+#  pod 'PWLocation', '3.8.4'
+  pod 'PWMapKit/NoAds', '3.9.1'
+  pod 'PWLocation/NoAds', '3.8.4'
+
+  pod 'PWEngagement/NoAds', '3.7.4'
+  pod 'Kingfisher', '5.7.1'
+  pod 'MBProgressHUD', '1.1.0'
+  pod 'SDCAlertView', '11.1.2'
+end
+
+post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+        config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ''
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ''
+            config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+            config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.2'
+        end
+    end
+end
